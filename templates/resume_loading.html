@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Analyzing Resume</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+<meta http-equiv="refresh"
+content="3;url={{ url_for('process_resume') }}">
+
+</head>
+
+<body>
+
+<section class="loading-container">
+
+<div class="loading-card">
+
+<div class="loading-icon">
+
+🧠
+
+</div>
+
+<h1>
+
+Analyzing Resume
+
+</h1>
+
+<p>
+
+InterviewIQ AI is evaluating your resume and generating insights.
+
+</p>
+
+<div class="loader"></div>
+
+<div class="loading-steps">
+
+<div class="loading-step">
+
+<span>✓</span>
+
+Extracting Resume Content
+
+</div>
+
+<div class="loading-step">
+
+<span>✓</span>
+
+Identifying Skills & Technologies
+
+</div>
+
+<div class="loading-step">
+
+<span>✓</span>
+
+Calculating Resume Readiness Score
+
+</div>
+
+<div class="loading-step">
+
+<span>✓</span>
+
+Generating Recommendations
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

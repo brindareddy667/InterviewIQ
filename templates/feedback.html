@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+
+<title>
+
+Interview Feedback
+
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+InterviewIQ AI
+
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<button class="theme-toggle">
+☀️
+ </button>
+
+</div>
+
+</nav>
+
+<section class="report-container">
+
+<div class="score-box">
+
+<h2>
+
+Overall Interview Score
+
+</h2>
+
+<div class="score-number">
+
+{{ feedback.overall_score }}
+
+</div>
+
+<p>
+
+AI Interview Evaluation Complete
+
+</p>
+
+</div>
+
+<div class="report-grid">
+
+<div class="report-card">
+
+<h3>
+
+Technical Knowledge
+
+</h3>
+
+<ul>
+
+<li>
+
+{{ feedback.technical_score }}/100
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Project Understanding
+
+</h3>
+
+<ul>
+
+<li>
+
+{{ feedback.project_score }}/100
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Problem Solving
+
+</h3>
+
+<ul>
+
+<li>
+
+{{ feedback.problem_solving_score }}/100
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Strengths
+
+</h3>
+
+<ul>
+
+{% for item in feedback.strengths %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Areas To Improve
+
+</h3>
+
+<ul>
+
+{% for item in feedback.improvements %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Topics To Revise
+
+</h3>
+
+<ul>
+
+{% for item in feedback.topics %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+</div>
+
+<br><br>
+
+<div class="action-buttons">
+
+<a
+href="/start-interview"
+class="primary-btn">
+
+🔄 Practice Again
+
+</a>
+
+<a
+href="/"
+class="secondary-btn">
+
+🏠 Back To Home
+
+</a>
+
+</div>
+
+<br><br>
+
+<div style="text-align:center;">
+
+<a
+href="/voice_intro"
+class="primary-btn">
+
+🎙️ Start AI Voice Interview
+
+</a>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

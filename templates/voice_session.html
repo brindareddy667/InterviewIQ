@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+InterviewIQ Voice
+
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+🎙️ InterviewIQ Voice
+
+</div>
+
+<div class="nav-links">
+
+<div class="question-counter">
+
+<span id="questionCounter">
+
+Question 1 / 10
+
+</span>
+
+</div>
+
+<div class="voice-timer">
+
+⏱ 00:00
+
+</div>
+
+<button class="theme-toggle">
+☀️
+</button>
+
+</div>
+
+</nav>
+
+<section class="voice-layout">
+
+<!-- SIDEBAR -->
+
+<aside class="voice-sidebar">
+
+<h3>
+
+Voice States
+
+</h3>
+
+<div class="state-item">
+
+<span class="state-dot blue"></span>
+
+Assistant Speaking
+
+</div>
+
+<div class="state-item">
+
+<span class="state-dot purple"></span>
+
+Listening
+
+</div>
+
+<div class="state-item">
+
+<span class="state-dot orange"></span>
+
+Thinking
+
+</div>
+
+<div class="state-item">
+
+<span class="state-dot white"></span>
+
+Ready
+
+</div>
+
+<hr>
+
+<div class="current-status">
+
+🔵 Assistant Speaking
+
+</div>
+
+<p class="status-desc">
+
+AI is currently asking a question.
+
+</p>
+
+<div class="voice-guide-card">
+
+<h4>
+
+📌 Quick Guide
+
+</h4>
+
+<ul>
+
+<li>
+🎤 Click <strong>Speak</strong> to start answering.
+</li>
+
+<li>
+⏹ Click <strong>Stop</strong> when your answer is complete.
+</li>
+
+<li>
+➡️ Click <strong>Next Question</strong> to continue.
+</li>
+
+<li>
+🗑 Use <strong>Clear Answer</strong> to record again.
+</li>
+
+<li>
+🔁 Use <strong>Repeat Question</strong> if needed.
+</li>
+
+</ul>
+
+</div>
+
+</aside>
+
+<!-- MAIN -->
+
+<div class="voice-main">
+
+<div class="assistant-status">
+
+<div class="mini-orb">
+
+</div>
+
+<div>
+
+<h2>
+
+AI Assistant Speaking
+
+</h2>
+
+<p id="currentQuestion">
+
+{{ first_question }}
+
+</p>
+
+<input
+type="hidden"
+id="latestTranscript">
+
+</div>
+
+</div>
+
+<div class="waveform-container">
+
+<div class="waveform">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</div>
+
+<div class="response-section">
+
+<div class="response-header">
+
+Your Response
+
+</div>
+
+<div class="response-area"
+id="responseArea">
+
+Your spoken response will appear here...
+
+</div>
+
+</div>
+
+<div class="controls">
+
+<button
+id="speakBtn"
+class="voice-btn speak-enabled">
+
+🎤 Speak
+
+</button>
+
+<button
+id="stopBtn"
+class="voice-btn">
+
+⏹ Stop
+
+</button>
+
+<button
+id="repeatBtn"
+class="voice-btn">
+
+🔁 Repeat Question
+
+</button>
+
+<button
+id="clearBtn"
+class="voice-btn">
+
+🗑 Clear Answer
+
+</button>
+
+<button
+id="nextBtn"
+class="voice-btn"
+disabled>
+
+➡️ Next Question
+
+</button>
+
+</div>
+
+<div class="bottom-controls">
+
+<button
+id="endBtn"
+class="voice-btn">
+
+❌ End Interview
+
+</button>
+
+<button
+id="restartBtn"
+class="voice-btn">
+
+🔄 Restart Interview
+
+</button>
+
+<button
+id="finishBtn"
+class="voice-btn finish-disabled">
+
+🔒 Finish Interview
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static',
+filename='script.js') }}"></script>
+
+</body>
+
+</html>

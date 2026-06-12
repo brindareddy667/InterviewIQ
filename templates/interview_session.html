@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+
+<title>
+
+Interview Practice
+
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+InterviewIQ AI
+
+</div>
+
+</nav>
+
+<section class="report-container">
+
+<div class="score-box">
+
+<h2>
+
+Interview Practice
+
+</h2>
+
+<div class="score-box">
+
+<h2>
+
+Interview Practice
+
+</h2>
+
+<p>
+
+Question {{ current_question }}
+
+of
+
+{{ total_questions }}
+
+</p>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+style="width: {{ current_question * 100 / total_questions }}%;">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="report-card question-card">
+
+<h3>
+
+{{ question }}
+
+</h3>
+
+</div>
+
+<form
+method="POST"
+action="/submit-answer">
+
+<div class="report-card">
+
+<textarea
+name="answer"
+required
+maxlength="3000"
+placeholder="Type your answer here..."
+class="answer-box"></textarea>
+
+<input
+type="hidden"
+name="question_index"
+value="{{ current_question }}">
+
+<div class="char-counter">
+
+<span id="charCount">
+
+0
+
+</span>
+
+/ 3000 Characters
+
+</div>
+
+<br>
+
+<button
+type="submit"
+class="primary-btn full-btn">
+
+Submit Answer
+
+</button>
+
+</div>
+
+</form>
+
+</section>
+
+<script>
+
+const textarea =
+document.querySelector(".answer-box");
+
+const counter =
+document.getElementById("charCount");
+
+textarea.addEventListener(
+"input",
+function(){
+
+counter.innerText =
+this.value.length;
+
+}
+);
+
+</script>
+
+</body>
+
+</html>

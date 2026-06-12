@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Interview Setup</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+InterviewIQ AI
+
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<button class="theme-toggle">
+☀️
+</button>
+
+</div>
+
+</nav>
+
+<section class="setup-container">
+
+<div class="setup-card">
+
+<h1>
+
+Setup Your Interview
+
+</h1>
+
+<p>
+
+Upload your resume and select your target role.
+
+</p>
+
+<form
+method="POST"
+action="/resume-loading"
+enctype="multipart/form-data">
+
+<div class="form-group">
+
+<label>
+
+Upload Resume
+
+</label>
+
+<div class="upload-box">
+
+<input
+type="file"
+id="resumeFile"
+name="resume"
+accept=".pdf"
+required>
+
+<p id="fileLabel">
+
+📄 Drop PDF Here
+or Click To Upload
+
+</p>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Select Target Role
+
+</label>
+
+<div class="role-grid">
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="AI Engineer"
+required>
+
+<span>AI Engineer</span>
+
+</label>
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="Software Engineer">
+
+<span>Software Engineer</span>
+
+</label>
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="ML Engineer">
+
+<span>ML Engineer</span>
+
+</label>
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="Backend Developer">
+
+<span>Backend Developer</span>
+
+</label>
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="Frontend Developer">
+
+<span>Frontend Developer</span>
+
+</label>
+
+<label class="role-card">
+
+<input
+type="radio"
+name="role"
+value="Data Analyst">
+
+<span>Data Analyst</span>
+
+</label>
+
+</div>
+
+</div>
+
+<div class="form-group">
+
+<label>
+
+Experience Level
+
+</label>
+
+<select name="experience">
+
+<option>
+Fresher
+</option>
+
+<option>
+0-2 Years
+</option>
+
+<option>
+2-5 Years
+</option>
+
+<option>
+5+ Years
+</option>
+
+</select>
+
+</div>
+
+<button
+type="submit"
+class="primary-btn full-btn">
+
+Analyze Resume
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<script src="{{ url_for('static',
+filename='script.js') }}"></script>
+
+</body>
+
+</html>

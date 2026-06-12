@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+
+<title>Resume Report</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+InterviewIQ AI
+
+</div>
+
+<div class="nav-links">
+
+<a href="/">Home</a>
+
+<button class="theme-toggle">
+☀️
+ </button>
+
+<a href="/interview">
+
+New Analysis
+
+</a>
+
+</div>
+
+</nav>
+
+<section class="report-container">
+
+<div class="score-box">
+
+<h2>
+
+Resume Readiness Score
+
+</h2>
+
+<div class="score-number">
+
+{{ report.score }}
+
+</div>
+
+<p>
+
+AI Resume Evaluation Complete
+
+</p>
+
+</div>
+
+<div class="report-grid">
+
+<div class="report-card">
+
+<h3>
+
+Strengths
+
+</h3>
+
+<ul>
+
+{% for item in report.strengths %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Areas For Improvement
+
+</h3>
+
+<ul>
+
+{% for item in report.improvements %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="report-card">
+
+<h3>
+
+Skills Overview
+
+</h3>
+
+<div class="skill-tags">
+
+{% for item in report.skills %}
+
+<span class="skill-tag">
+
+{{ item }}
+
+</span>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+<div class="recommendation-box">
+
+<h3>
+
+Recommendations
+
+</h3>
+
+<ul>
+
+{% for item in report.recommendations %}
+
+<li>
+
+✓ {{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<br><br>
+
+<div class="action-buttons">
+
+<a
+href="/interview-loading"
+class="primary-btn">
+
+🚀 Start Interview Practice
+
+</a>
+
+<a
+href="/"
+class="secondary-btn">
+
+🏠 Back To Home
+
+</a>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

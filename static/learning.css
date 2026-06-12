@@ -1,0 +1,430 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+    "Segoe UI",
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #050816,
+        #0f172a,
+        #111827
+    );
+
+    color:white;
+
+    min-height:100vh;
+}
+
+/* ==========================
+NAVBAR
+========================== */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 60px;
+
+    backdrop-filter:blur(20px);
+
+    background:
+    rgba(0,0,0,.2);
+
+    border-bottom:
+    1px solid rgba(
+        255,255,255,.08
+    );
+}
+
+.logo{
+
+    font-size:1.3rem;
+
+    font-weight:700;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:#60a5fa;
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+
+    text-align:center;
+
+    padding:
+    90px 20px 70px;
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+.hero p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+}
+
+/* ==========================
+CONTAINER
+========================== */
+
+.learning-container{
+
+    width:1200px;
+
+    max-width:95%;
+
+    margin:auto;
+
+    padding-bottom:80px;
+}
+
+/* ==========================
+MAIN CARD
+========================== */
+
+.main-card{
+
+    margin-bottom:25px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(
+        255,255,255,.08
+    );
+
+    backdrop-filter:
+    blur(20px);
+
+    transition:.3s;
+}
+
+.main-card:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 0 30px rgba(
+        59,130,246,.15
+    );
+}
+
+.main-header{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    color:white;
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+    padding:24px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    transition:.3s;
+}
+
+.main-header:hover{
+
+    background:
+    rgba(59,130,246,.15);
+}
+
+.main-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:
+    max-height .5s ease;
+
+    padding:0 25px;
+}
+
+.main-content.active{
+
+    max-height:20000px;
+
+    padding:25px;
+}
+
+/* ==========================
+SUB CARD
+========================== */
+
+.sub-card{
+
+    margin-bottom:15px;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(
+        255,255,255,.08
+    );
+}
+
+.sub-header{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    color:white;
+
+    background:
+    rgba(255,255,255,.04);
+
+    padding:18px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.sub-header:hover{
+
+    background:
+    rgba(59,130,246,.15);
+}
+
+.sub-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:
+    max-height .4s ease;
+
+    padding:0 20px;
+}
+
+.sub-content.active{
+
+    max-height:5000px;
+
+    padding:20px;
+}
+
+/* ==========================
+TECHNICAL LEVEL 2
+========================== */
+
+.tech-card{
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(
+        255,255,255,.06
+    );
+}
+
+.tech-header{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    color:white;
+
+    background:
+    rgba(255,255,255,.03);
+
+    padding:16px;
+
+    font-weight:600;
+}
+
+.tech-content{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:
+    max-height .4s ease;
+
+    padding:0 18px;
+}
+
+.tech-content.active{
+
+    max-height:5000px;
+
+    padding:18px;
+}
+
+/* ==========================
+TEXT
+========================== */
+
+h4{
+
+    color:#60a5fa;
+
+    margin-top:18px;
+
+    margin-bottom:10px;
+}
+
+p{
+
+    color:#e2e8f0;
+
+    line-height:1.9;
+
+    margin-bottom:15px;
+}
+
+ul,
+ol{
+
+    padding-left:25px;
+
+    margin-bottom:15px;
+}
+
+li{
+
+    margin-bottom:8px;
+
+    line-height:1.8;
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#94a3b8;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+    }
+
+}
+
+.sub-content{
+
+    background:
+    rgba(255,255,255,.02);
+
+    border-top:
+    1px solid rgba(
+        255,255,255,.05
+    );
+}
+
+.sub-content h4{
+
+    color:#60a5fa;
+
+    margin-top:20px;
+}
+
+.sub-content ul,
+.sub-content ol{
+
+    padding-left:25px;
+}

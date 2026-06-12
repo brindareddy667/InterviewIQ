@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Interview Report
+
+</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+
+InterviewIQ Voice
+
+</div>
+
+</nav>
+
+<section class="feedback-page">
+
+<div class="score-card">
+
+<h1>
+
+Interview Performance Report
+
+</h1>
+
+<div class="overall-score">
+
+{{ feedback.overall_score }}
+
+</div>
+
+<p>
+
+Overall Score
+
+</p>
+
+</div>
+
+<div class="feedback-grid">
+
+<div class="feedback-box">
+
+<h3>
+
+Technical Knowledge
+
+</h3>
+
+<p>
+
+{{ feedback.technical_score }}/100
+
+</p>
+
+</div>
+
+<div class="feedback-box">
+
+<h3>
+
+Confidence
+
+</h3>
+
+<p>
+
+{{ feedback.confidence_score }}/100
+
+</p>
+
+</div>
+
+<div class="feedback-box">
+
+<h3>
+
+Communication
+
+</h3>
+
+<p>
+
+{{ feedback.communication_score }}/100
+
+</p>
+
+</div>
+
+<div class="feedback-box">
+
+<h3>
+
+Problem Solving
+
+</h3>
+
+<p>
+
+{{ feedback.problem_solving_score }}/100
+
+</p>
+
+</div>
+
+</div>
+
+<div class="feedback-section">
+
+<h2>
+
+Strengths
+
+</h2>
+
+<ul>
+
+{% for item in feedback.strengths %}
+
+<li>
+
+{{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="feedback-section">
+
+<h2>
+
+Areas To Improve
+
+</h2>
+
+<ul>
+
+{% for item in feedback.weaknesses %}
+
+<li>
+
+{{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="feedback-section">
+
+<h2>
+
+Suggestions
+
+</h2>
+
+<ul>
+
+{% for item in feedback.suggestions %}
+
+<li>
+
+{{ item }}
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+<div class="feedback-section">
+
+<h2>
+
+Topics To Improve
+
+</h2>
+
+<div class="topics">
+
+{% for topic in feedback.topics_to_improve %}
+
+<span>
+
+{{ topic }}
+
+</span>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+<div class="feedback-buttons">
+
+<a
+href="/voice_session"
+class="primary-btn">
+
+🎙️ Retake Interview
+
+</a>
+
+<a
+href="/"
+class="secondary-btn">
+
+🏠 Back To Home
+
+</a>
+
+</div>
+
+</section>
+
+</body>
+
+</html>
